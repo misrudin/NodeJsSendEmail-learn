@@ -1,15 +1,13 @@
-const conn = require("../config/db");
+// //model.js
+// var mongoose = require("mongoose");
+// var mailSchema = mongoose.Schema;
 
-module.exports = {
-  getCategory: () => {
-    return new Promise((resolve, reject) => {
-      conn.query("SELECT * FROM category", (err, result) => {
-        if (!err) {
-          resolve(result);
-        } else {
-          reject(new Error(err));
-        }
-      });
-    });
-  }
-};
+// var newMailSchema = new mailSchema({
+//   from: { type: String, default: "me@gmail.com" },
+//   to: String,
+//   subject: String,
+//   text: String,
+//   html: String
+// });
+
+// module.exports = mongoose.model("MailSchema", newMailSchema);

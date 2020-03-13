@@ -1,8 +1,6 @@
-const express = require("express");
+var express = require("express"),
+  router = express.Router(),
+  controller = require("../controllers/coba");
 
-const router = express.Router();
-const cobaController = require("../controllers/coba");
-
-router.post("/", cobaController.sendEmail);
-
+router.post("/", controller.SendMail);
 module.exports = router;
